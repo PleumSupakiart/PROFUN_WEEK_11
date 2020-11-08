@@ -23,16 +23,22 @@ void Cir(float* r)
 	circumference = 2 * pi * (*r);
 	float Circle[] = {space,circumference};
 
-	if (space > 0 && circumference > 0)
+	if (*r >= 0)
 	{
-		int i = 0;
+		if (space > 0 && circumference > 0) {
+			int i = 0;
 			cout << " Circle sapce = " << Circle[i] << endl;
 			i++;
 			cout << " Circle circumference  = " << Circle[i] << endl;
+		}
+			
+		if (space <= 0 && circumference <= 0)
+			{
+				cout << "This circle is don't have space" << endl;
+			}
+		
 	}
-	else {
-		cout << "This circle is don't have space" << endl;
-	}
+	
 }
 
 int main()
